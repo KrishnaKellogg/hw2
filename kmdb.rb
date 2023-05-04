@@ -70,10 +70,10 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 
-#Studio.destroy_all
-#Movie.destroy_all
-#Actor.destroy_all
-#Role.destroy_all
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 Rails.logger.info "___Refreshed___"
 
 # Generate models and tables, according to the domain model.
@@ -88,9 +88,32 @@ new_studio = Studio.new
 new_studio["name"] = "Warner Bros."
 new_studio.save
 
-#inserting movies data
+#inserting movies data option 1
 
+# warner = Studio.find_by({"name" => "Warner Bros."})
 
+# movie = Movie.new
+# movie["title"] = "Batman Begins"
+# movie["year_released"] = "2005"
+# movie["rated"] = "PG-13"
+# movie["studio_id"] = warner["id"]
+# movie.save
+
+# movie = Movie.new
+# movie["title"] = "The Dark Knight"
+# movie["year_released"] = "2008"
+# movie["rated"] = "PG-13"
+# movie["studio_id"] = warner["id"]
+# movie.save
+
+# movie = Movie.new
+# movie["title"] = "The Dark Knight Rises"
+# movie["year_released"] = "2012"
+# movie["rated"] = "PG-13"
+# movie["studio_id"] = warner["id"]
+# movie.save
+
+#option 2
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
@@ -257,8 +280,17 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-batman_movies = Movie.where({})
-puts batman_movies.inspect
+
+movies = Movie.where({"studio_id" => new_studio["id"]})
+
+for movie in movies
+    title = movie["title"]
+    year_released = movie["year_released"]
+    rated = movie["rated"]
+    studio = new_studio["name"]
+    puts "#{title} #{year_released} #{rated} #{studio}"
+    # puts Movie.all
+end
 
 # Prints a header for the cast output
 puts ""
@@ -268,3 +300,4 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
