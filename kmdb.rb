@@ -74,14 +74,53 @@
 #Movie.destroy_all
 #Actor.destroy_all
 #Role.destroy_all
+Rails.logger.info "___Refreshed___"
 
 # Generate models and tables, according to the domain model.
 
-#in db files
+puts "check schema.rb" 
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
+
+#insert studios data
+new_studio = Studio.new
+new_studio["name"] = "Warner Bros."
+new_studio.save
+
+#inserting movies data
+new_movie = Movie.new
+new_movie["title"] = "Batman Begins"
+new_movie["year_released"] = "2005"
+new_movie["rated"] = "PG-13"
+new_movie["studio_id"] = new_studio["id"]
+
+new_movie2 = Movie.new
+new_movie2["title"] = "The Dark Knight"
+new_movie2["year_released"] = "2008"
+new_movie2["rated"] = "PG-13"
+new_movie2["studio_id"] = new_studio["id"]
+
+new_movie3 = Movie.new
+new_movie3["title"] = "The Dark Knight Rises"
+new_movie3["year_released"] = "2012"
+new_movie3["rated"] = "PG-13"
+new_movie3["studio_id"] = new_studio["id"]
+
+#inserting actor and roles for Batman Begins
+new_actor = Actor.new 
+new_actor["name"] = "Christian Bale"
+new_actor2 = Actor.new 
+new_actor2["name"] = "Michael Cane"
+new_actor3 = Actor.new 
+new_actor3["name"] = "Liam Neeson"
+new_actor4 = Actor.new 
+new_actor4["name"] = "Katie Holmes"
+new_actor5 = Actor.new 
+new_actor5["name"] = "Gary Oldman"
+
+
+
 
 # Prints a header for the movies output
 puts "Movies"
