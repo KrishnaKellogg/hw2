@@ -89,6 +89,8 @@ new_studio["name"] = "Warner Bros."
 new_studio.save
 
 #inserting movies data
+
+
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
@@ -255,7 +257,8 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-# TODO!
+batman_movies = Movie.where({})
+puts batman_movies.inspect
 
 # Prints a header for the cast output
 puts ""
