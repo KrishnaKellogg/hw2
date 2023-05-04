@@ -158,30 +158,30 @@ new_actor7["name"] = "Aaron Eckhart"
 new_actor8 = Actor.new 
 new_actor8["name"] = "Maggie Gyllenhaal"
 
-new_role = Role.new 
-new_role["movie_id"] = new_movie["id"]
-new_role["actor_id"] = new_actor["id"]
-new_role["character_name"] = "Bruce Wayne"
+new_role6 = Role.new 
+new_role6["movie_id"] = new_movie2["id"]
+new_role6["actor_id"] = new_actor["id"]
+new_role6["character_name"] = "Bruce Wayne"
 
-new_role2 = Role.new 
-new_role2["movie_id"] = new_movie["id"]
-new_role2["actor_id"] = new_actor2["id"]
-new_role2["character_name"] = "Alfred"
+new_role7 = Role.new 
+new_role7["movie_id"] = new_movie2["id"]
+new_role7["actor_id"] = new_actor6["id"]
+new_role7["character_name"] = "Joker"
 
-new_role3 = Role.new 
-new_role3["movie_id"] = new_movie["id"]
-new_role3["actor_id"] = new_actor3["id"]
-new_role3["character_name"] = "Ra's Al Ghul"
+new_role8 = Role.new 
+new_role8["movie_id"] = new_movie2["id"]
+new_role8["actor_id"] = new_actor7["id"]
+new_role8["character_name"] = "Harvey Dent"
 
-new_role4 = Role.new 
-new_role4["movie_id"] = new_movie["id"]
-new_role4["actor_id"] = new_actor4["id"]
-new_role4["character_name"] = "Rachel Dawes"
+new_role9 = Role.new 
+new_role9["movie_id"] = new_movie2["id"]
+new_role9["actor_id"] = new_actor2["id"]
+new_role9["character_name"] = "Alfred"
 
-new_role5 = Role.new 
-new_role5["movie_id"] = new_movie["id"]
-new_role5["actor_id"] = new_actor5["id"]
-new_role5["character_name"] = "Commissioner Gordon"
+new_role10 = Role.new 
+new_role10["movie_id"] = new_movie2["id"]
+new_role10["actor_id"] = new_actor8["id"]
+new_role10["character_name"] = "Rachel Dawes"
 
 #inserting actor and roles for The Dark Knight Rises 
 
@@ -194,30 +194,30 @@ new_actor10["name"] = "Joseph Gordon-Levitt"
 new_actor11 = Actor.new 
 new_actor11["name"] = "Anne Hathaway"
 
-new_role = Role.new 
-new_role["movie_id"] = new_movie["id"]
-new_role["actor_id"] = new_actor["id"]
-new_role["character_name"] = "Bruce Wayne"
+new_role11 = Role.new 
+new_role11["movie_id"] = new_movie3["id"]
+new_role11["actor_id"] = new_actor["id"]
+new_role11["character_name"] = "Bruce Wayne"
 
-new_role2 = Role.new 
-new_role2["movie_id"] = new_movie["id"]
-new_role2["actor_id"] = new_actor2["id"]
-new_role2["character_name"] = "Alfred"
+new_role12 = Role.new 
+new_role12["movie_id"] = new_movie3["id"]
+new_role12["actor_id"] = new_actor5["id"]
+new_role12["character_name"] = "Commissioner Gordon"
 
-new_role3 = Role.new 
-new_role3["movie_id"] = new_movie["id"]
-new_role3["actor_id"] = new_actor3["id"]
-new_role3["character_name"] = "Ra's Al Ghul"
+new_role13 = Role.new 
+new_role13["movie_id"] = new_movie3["id"]
+new_role13["actor_id"] = new_actor9["id"]
+new_role13["character_name"] = "Bane"
 
-new_role4 = Role.new 
-new_role4["movie_id"] = new_movie["id"]
-new_role4["actor_id"] = new_actor4["id"]
-new_role4["character_name"] = "Rachel Dawes"
+new_role14 = Role.new 
+new_role14["movie_id"] = new_movie3["id"]
+new_role14["actor_id"] = new_actor10["id"]
+new_role14["character_name"] = "John Blake"
 
-new_role5 = Role.new 
-new_role5["movie_id"] = new_movie["id"]
-new_role5["actor_id"] = new_actor5["id"]
-new_role5["character_name"] = "Commissioner Gordon"
+new_role15 = Role.new 
+new_role15["movie_id"] = new_movie3["id"]
+new_role15["actor_id"] = new_actor11["id"]
+new_role15["character_name"] = "Selina Kyle"
 
 
 # Prints a header for the movies output
