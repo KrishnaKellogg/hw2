@@ -110,16 +110,78 @@ new_movie3["studio_id"] = new_studio["id"]
 #inserting actor and roles for Batman Begins
 new_actor = Actor.new 
 new_actor["name"] = "Christian Bale"
+
 new_actor2 = Actor.new 
 new_actor2["name"] = "Michael Cane"
+
 new_actor3 = Actor.new 
 new_actor3["name"] = "Liam Neeson"
+
 new_actor4 = Actor.new 
 new_actor4["name"] = "Katie Holmes"
+
 new_actor5 = Actor.new 
 new_actor5["name"] = "Gary Oldman"
 
+new_role = Role.new 
+new_role["movie_id"] = new_movie["id"]
+new_role["actor_id"] = new_actor["id"]
+new_role["character_name"] = "Bruce Wayne"
 
+new_role2 = Role.new 
+new_role2["movie_id"] = new_movie["id"]
+new_role2["actor_id"] = new_actor2["id"]
+new_role2["character_name"] = "Alfred"
+
+new_role3 = Role.new 
+new_role3["movie_id"] = new_movie["id"]
+new_role3["actor_id"] = new_actor3["id"]
+new_role3["character_name"] = "Ra's Al Ghul"
+
+new_role4 = Role.new 
+new_role4["movie_id"] = new_movie["id"]
+new_role4["actor_id"] = new_actor4["id"]
+new_role4["character_name"] = "Rachel Dawes"
+
+new_role5 = Role.new 
+new_role5["movie_id"] = new_movie["id"]
+new_role5["actor_id"] = new_actor5["id"]
+new_role5["character_name"] = "Commissioner Gordon"
+
+#inserting actor and roles for The Dark Knight
+new_actor6 = Actor.new 
+new_actor6["name"] = "Heath Ledger"
+
+new_actor7 = Actor.new 
+new_actor7["name"] = "Aaron Eckhart"
+
+new_actor8 = Actor.new 
+new_actor8["name"] = "Maggie Gyllenhaal"
+
+new_role = Role.new 
+new_role["movie_id"] = new_movie["id"]
+new_role["actor_id"] = new_actor["id"]
+new_role["character_name"] = "Bruce Wayne"
+
+new_role2 = Role.new 
+new_role2["movie_id"] = new_movie["id"]
+new_role2["actor_id"] = new_actor2["id"]
+new_role2["character_name"] = "Alfred"
+
+new_role3 = Role.new 
+new_role3["movie_id"] = new_movie["id"]
+new_role3["actor_id"] = new_actor3["id"]
+new_role3["character_name"] = "Ra's Al Ghul"
+
+new_role4 = Role.new 
+new_role4["movie_id"] = new_movie["id"]
+new_role4["actor_id"] = new_actor4["id"]
+new_role4["character_name"] = "Rachel Dawes"
+
+new_role5 = Role.new 
+new_role5["movie_id"] = new_movie["id"]
+new_role5["actor_id"] = new_actor5["id"]
+new_role5["character_name"] = "Commissioner Gordon"
 
 
 # Prints a header for the movies output
