@@ -78,7 +78,7 @@ Rails.logger.info "___Refreshed___"
 
 # Generate models and tables, according to the domain model.
 
-puts "check schema.rb" 
+puts "check schema.rb for table schema and column names" 
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
@@ -88,7 +88,7 @@ new_studio = Studio.new
 new_studio["name"] = "Warner Bros."
 new_studio.save
 
-#inserting movies data option 1
+#inserting movies data option 1 - **didn't end up working, but leaving it here for learning**
 
 # warner = Studio.find_by({"name" => "Warner Bros."})
 
@@ -113,7 +113,7 @@ new_studio.save
 # movie["studio_id"] = warner["id"]
 # movie.save
 
-#option 2
+#insert movie data option 2
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
@@ -282,7 +282,7 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 
 movies = Movie.all
-studios = Studio.all
+#studios = Studio.all
 
 for movie in movies
     title = movie["title"]
@@ -303,8 +303,8 @@ puts ""
 
 #example: Batman Begins          Christian Bale        Bruce Wayne
 
-movies = Movie.all
-actors = Actor.all 
+#movies = Movie.all
+#actors = Actor.all 
 roles = Role.all
 
 for role in roles 
