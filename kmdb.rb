@@ -283,7 +283,6 @@ puts ""
 
 movies = Movie.all
 studios = Studio.all
-#warner = Studio.find_by()
 
 for movie in movies
     title = movie["title"]
@@ -291,7 +290,6 @@ for movie in movies
     rated = movie["rated"]
     studio_name = Studio.find_by({"id" => movie["studio_id"]})["name"]
     puts "#{title} #{year_released} #{rated} #{studio_name}"
-    #puts movie
 end
 
 # Prints a header for the cast output
@@ -305,16 +303,15 @@ puts ""
 
 #example: Batman Begins          Christian Bale        Bruce Wayne
 
-# bb = Movie.find_by({"title" => "Batman Begins"})
-# tdk = Movie.find_by({"title" => "The Dark Knight"})
-# tdkr = Movie.find_by({"title" => "The Dark Knight Rises"})
 
-# bbroles = Roles.find_by({"movie_id" => bb["id"]})
-# tdkroles = Roles.find_by("movie_id" => tdk["id"])
-# tdkrroles = Roles.find_by("movie_id" => tdkr["id"])
+movies = Movie.all
+actors = Actor.all 
+roles = Role.all
 
-# for role in bbroles 
-#     title = movie["title"]
-#     name = actor["name"]
-#     character_name = new_role["character)name"]
-#     puts "#{}"
+
+for role in roles 
+    title = Movie.find_by({"id" => role["movie_id"]})["title"]
+    name = Actor.find_by({"id" => role["actor_id"]})["name"]
+    character_name = role["character_name"]
+    puts "#{title} #{name} #{character_name}"
+end
