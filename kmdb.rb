@@ -303,11 +303,9 @@ puts ""
 
 #example: Batman Begins          Christian Bale        Bruce Wayne
 
-
 movies = Movie.all
 actors = Actor.all 
 roles = Role.all
-
 
 for role in roles 
     title = Movie.find_by({"id" => role["movie_id"]})["title"]
