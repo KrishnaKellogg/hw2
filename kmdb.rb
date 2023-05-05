@@ -282,13 +282,15 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 
 movies = Movie.all
+studios = Studio.all
+#warner = Studio.find_by()
 
 for movie in movies
     title = movie["title"]
     year_released = movie["year_released"]
     rated = movie["rated"]
-    studio = new_studio["name"]
-    puts "#{title} #{year_released} #{rated} #{studio}"
+    studio_name = Studio.find_by({"id" => movie["studio_id"]})["name"]
+    puts "#{title} #{year_released} #{rated} #{studio_name}"
     #puts movie
 end
 
@@ -310,3 +312,9 @@ puts ""
 # bbroles = Roles.find_by({"movie_id" => bb["id"]})
 # tdkroles = Roles.find_by("movie_id" => tdk["id"])
 # tdkrroles = Roles.find_by("movie_id" => tdkr["id"])
+
+# for role in bbroles 
+#     title = movie["title"]
+#     name = actor["name"]
+#     character_name = new_role["character)name"]
+#     puts "#{}"
