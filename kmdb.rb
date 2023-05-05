@@ -281,7 +281,7 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 
-movies = Movie.where({"studio_id" => new_studio["id"]})
+movies = Movie.all
 
 for movie in movies
     title = movie["title"]
@@ -289,7 +289,7 @@ for movie in movies
     rated = movie["rated"]
     studio = new_studio["name"]
     puts "#{title} #{year_released} #{rated} #{studio}"
-    # puts Movie.all
+    #puts movie
 end
 
 # Prints a header for the cast output
@@ -301,3 +301,12 @@ puts ""
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
+#example: Batman Begins          Christian Bale        Bruce Wayne
+
+# bb = Movie.find_by({"title" => "Batman Begins"})
+# tdk = Movie.find_by({"title" => "The Dark Knight"})
+# tdkr = Movie.find_by({"title" => "The Dark Knight Rises"})
+
+# bbroles = Roles.find_by({"movie_id" => bb["id"]})
+# tdkroles = Roles.find_by("movie_id" => tdk["id"])
+# tdkrroles = Roles.find_by("movie_id" => tdkr["id"])
